@@ -15,12 +15,14 @@ namespace CD01.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 
         public IActionResult RoomIndex()
         {
-            return View();
+            IEnumerable<Room> allrooms = _db.Rooms;
+            return View(allrooms);
         }
 
         public IActionResult RoomCreate() 
