@@ -27,332 +27,341 @@
                 height: auto;
             }
         }
+
+        .hidden-content {
+            display: none; /* ซ่อนเนื้อหา */
+        }
+
+        .visible-space {
+            height: 128px; /* ปรับขนาดพื้นที่ว่างตามที่ต้องการ */
+            /* สีพื้นหลังของพื้นที่ว่าง สามารถเปลี่ยนแปลงตามที่ต้องการ */
+            background-color: transparent;
+        }
     </style>
 
 
     <h5>ระบบบริหารอาคารชุด</h5>
     <b>นิติบุคคลอาคารชุด : xxxxxxxxxxx</b>
 
-    <div class="d-flex justify-content-between">
-      
-            <%--file--%>
-            <div class="col-3">
-                <div class="d-flex flex-wrap justify-content-start p-2" style="background-color: lightblue; width: fit-content; border-radius: 10px 15px;">
-                    <%--1--%>
-                    <a href="Room.aspx" style="text-decoration: none;">
-                        <div class="text-center">
+    <div class="d-flex justify-content-center">
 
-                            <div class="text-center xcard shadow" style="background-color: lightskyblue;">
-                                <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
-                                <img class="xpng" src="img\png\building_dl.png" alt="Rooms" />
-                                <div>
-                                    <label>ทะเบียนห้อง</label>
-                                </div>
+        <%--file--%>
+        <div class="col-3">
+            <div class="d-flex flex-wrap justify-content-start p-2" style="background-color: lightblue; width: fit-content; border-radius: 10px 15px;">
+                <%--1--%>
+                <a href="Room.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard shadow" style="background-color: lightskyblue;">
+                            <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
+                            <img class="xpng" src="img\gif\building_dl.png" alt="Rooms" />
+                            <div>
+                                <label>ทะเบียนห้อง</label>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                </a>
 
-                    <%--2--%>
+                <%--2--%>
 
-                    <a href="customer.aspx" style="text-decoration: none;">
-                        <div class="text-center">
+                <a href="customer.aspx" style="text-decoration: none;">
+                    <div class="text-center">
 
-                            <div class="text-center xcard" style="background-color: lightskyblue;">
-                                <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
-                                <img class="xpng" src="img/png/customer_dl.png" alt="customer" />
-                                <div>
-                                    <label>เจ้าของ</label>
-                                </div>
+                        <div class="text-center xcard" style="background-color: lightskyblue;">
+                            <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
+                            <img class="xpng" src="img/gif/customer_dl.png" alt="customer" />
+                            <div>
+                                <label>เจ้าของ</label>
+                            </div>
 
+                        </div>
+                    </div>
+                </a>
+
+                <%--1--%>
+
+                <a href="Room.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: lightskyblue">
+                            <img class="d-none xgif" src="img/gif/income_dl.gif" alt="Income" />
+                            <img class="xpng" src="img/gif/income_dl.png" alt="Rooms" />
+                            <div>
+                                <label>ประเภทรายรับ</label>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                </a>
 
-                    <%--1--%>
 
-                    <a href="Room.aspx" style="text-decoration: none;">
-                        <div class="text-center">
 
-                            <div class="text-center xcard" style="background-color: lightskyblue">
-                                <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
-                                <img class="xpng" src="img\png\building_dl.png" alt="Rooms" />
-                                <div>
-                                    <label>ประเภทรายรับ</label>
-                                </div>
+                <a href="customer.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: lightskyblue;">
+                            <img class="d-none xgif" src="img/gif/repair-tools_dl.gif" alt="customer" />
+                            <img class="xpng" src="img/gif/repair-tools_dl.png" alt="customer" />
+                            <div>
+                                <label>ซ่อมบำรุง</label>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                </a>
 
+                <a href="customer.aspx" style="text-decoration: none;">
+                    <div class="text-center">
 
-
-                    <a href="customer.aspx" style="text-decoration: none;">
-                        <div class="text-center">
-
-                            <div class="text-center xcard" style="background-color: lightskyblue;">
-                                <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
-                                <img class="xpng" src="img/png/customer_dl.png" alt="customer" />
-                                <div>
-                                    <label>ซ่อมบำรุง</label>
-                                </div>
+                        <div class="text-center xcard" style="background-color: lightskyblue;">
+                            <img class="d-none xgif" src="img/gif/mop_1.gif" alt="customer" />
+                            <img class="xpng" src="img/gif/mop_1.png" alt="customer" />
+                            <div>
+                                <label>ทำความสะอาด</label>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                </a>
 
-                    <a href="customer.aspx" style="text-decoration: none;">
-                        <div class="text-center">
+                <a href="#" style="text-decoration: none;">
+                    <div class="text-center">
 
-                            <div class="text-center xcard" style="background-color: lightskyblue;">
-                                <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
-                                <img class="xpng" src="img/png/customer_dl.png" alt="customer" />
-                                <div>
-                                    <label>ทำความสะอาด</label>
-                                </div>
+                        <div class="text-center xcard" style="background-color: lightskyblue">
+                            <img class="d-none xgif" src="img\gif\blank.png" alt="Rooms" />
+                            <img class="xpng" src="img\gif\blank.png" alt="Rooms" />
+                             <div class=""> <!-- เนื้อหาที่ซ่อนไว้ -->
+                                <label>...</label>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                </a>
+               
 
-                    <a href="Room.aspx" style="text-decoration: none;">
-                        <div class="text-center">
+                <a href="Room.aspx" style="text-decoration: none;">
+                    <div class="text-center">
 
-                            <div class="text-center xcard" style="background-color: lightskyblue">
-                                <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
-                                <img class="xpng" src="img\png\building_dl.png" alt="Rooms" />
-                                <div>
-                                    <label>ทะเบียน อื่นๆ</label>
-                                </div>
+                        <div class="text-center xcard" style="background-color: lightskyblue">
+                            <img class="d-none xgif" src="img\gif\right-arrow.gif" alt="Rooms" />
+                            <img class="xpng" src="img\gif\right-arrow.png" alt="Rooms" />
+                            <div>
+                                <label>ทะเบียน อื่นๆ</label>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                </a>
 
+               
 
-                </div>
             </div>
-            <%--/file--%>
-            <div class="row col-9">
-                <%--rc1--%>
-                <div class="col-4">
-                    <div class="d-flex flex-wrap justify-content-start p-2" style="background-color: lightblue; width: fit-content; border-radius: 10px 15px;">
+        </div>
+        <%--/file--%>
 
-                        <%--1--%>
+        <%--Record--%>
+        <div class="col-3 ms-2">
+            <div class="d-flex flex-wrap justify-content-start p-2" style="background-color: lightblue; width: fit-content; border-radius: 10px 15px;">
 
-                        <a href="Room.aspx" style="text-decoration: none;">
-                            <div class="text-center">
+                <%--1--%>
 
-                                <div class="text-center xcard" style="background-color: tan;">
-                                    <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
-                                    <img class="xpng" src="img\png\building_dl.png" alt="Rooms" />
-                                    <div>
-                                        <label>ใบเสร็จรับเงิน</label>
-                                    </div>
-                                </div>
+                <a href="Room.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: tan;">
+                            <img class="d-none xgif" src="img\gif\cash.gif" alt="Rooms" />
+                            <img class="xpng" src="img\gif\cash.png" alt="Rooms" />
+                            <div>
+                                <label>ใบเสร็จรับเงิน</label>
                             </div>
-                        </a>
-
-                        <%--2--%>
-
-                        <a href="customer.aspx" style="text-decoration: none;">
-                            <div class="text-center">
-
-                                <div class="text-center xcard" style="background-color: tan;">
-
-                                    <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
-                                    <img class="xpng" src="img/png/customer_dl.png" alt="customer" />
-                                    <div>
-                                        <label>ใบแจ้งค่าใช้จ่าย</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="Room.aspx" style="text-decoration: none;">
-                            <div class="text-center">
-
-                                <div class="text-center xcard" style="background-color: tan">
-                                    <img class="d-none xgif" src="img\gif\computer_dl.gif" alt="Process" />
-                                    <img class="xpng" src="img\png\computer_dl.png" alt="Process" />
-                                    <div>
-                                        <label>สร้างใบแจ้งหนี้</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-
-
-
-                    </div>
-                </div>
-                <%--/rc1--%>
-
-                <%--Record--%>
-                <div class="col-4">
-                    <div class="d-flex flex-wrap justify-content-start p-2" style="background-color: lightblue; width: fit-content; border-radius: 10px 15px;">
-
-
-
-                        <a href="Room.aspx" style="text-decoration: none;">
-                            <div class="text-center">
-
-                                <div class="text-center xcard" style="background-color: tan">
-                                    <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
-                                    <img class="xpng" src="img\png\building_dl.png" alt="Rooms" />
-                                    <div>
-                                        <label>บันทึกค่าส่วนกลาง</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <%--2--%>
-
-                        <a href="customer.aspx" style="text-decoration: none;">
-                            <div class="text-center">
-
-                                <div class="text-center xcard" style="background-color: tan;">
-                                    <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
-                                    <img class="xpng" src="img/png/customer_dl.png" alt="customer" />
-                                    <div>
-                                        <label>บันทึกค่าน้ำประปา</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <%--1--%>
-
-                        <a href="Room.aspx" style="text-decoration: none;">
-                            <div class="text-center">
-
-                                <div class="text-center xcard" style="background-color: tan">
-                                    <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
-                                    <img class="xpng" src="img\png\building_dl.png" alt="Rooms" />
-                                    <div>
-                                        <label>บันทึกค่าไฟฟ้า</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-                        <%--2--%>
-
-                        <a href="customer.aspx" style="text-decoration: none;">
-                            <div class="text-center">
-
-                                <div class="text-center xcard" style="background-color: tan;">
-                                    <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
-                                    <img class="xpng" src="img/png/customer_dl.png" alt="customer" />
-                                    <div>
-                                        <label>บันทึก รายการอื่นๆ</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-
-
-                    </div>
-                </div>
-                <%--/Record--%>
-                <div>
-                    <%--Report--%>
-                    <div class="col-8">
-                        <div class="m-2 p-2 d-flex justify-content-sm-start flex-wrap" style="background-color: lightblue; width: fit-content; border-radius: 10px 15px;">
-
-                            <%--1--%>
-
-                            <a href="Room.aspx" style="text-decoration: none;">
-                                <div class="text-center">
-
-                                    <div class="text-center xcard" style="background-color: lightpink">
-                                        <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
-                                        <img class="xpng" src="img\png\building_dl.png" alt="Rooms" />
-                                        <div>
-                                            <label>Room</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <%--2--%>
-
-                            <a href="customer.aspx" style="text-decoration: none;">
-                                <div class="text-center">
-
-                                    <div class="text-center xcard" style="background-color: lightpink;">
-                                        <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
-                                        <img class="xpng" src="img/png/customer_dl.png" alt="customer" />
-                                        <div>
-                                            <label>Customer</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <%--1--%>
-
-                            <a href="Room.aspx" style="text-decoration: none;">
-                                <div class="text-center">
-
-                                    <div class="text-center xcard" style="background-color: lightpink">
-                                        <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
-                                        <img class="xpng" src="img\png\building_dl.png" alt="Rooms" />
-                                        <div>
-                                            <label>Room</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <%--2--%>
-
-                            <a href="customer.aspx" style="text-decoration: none;">
-                                <div class="text-center">
-
-                                    <div class="text-center xcard" style="background-color: lightpink;">
-                                        <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
-                                        <img class="xpng" src="img/png/customer_dl.png" alt="customer" />
-                                        <div>
-                                            <label>Customer</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <%--1--%>
-
-                            <a href="Room.aspx" style="text-decoration: none;">
-                                <div class="text-center">
-
-                                    <div class="text-center xcard" style="background-color: lightpink">
-                                        <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
-                                        <img class="xpng" src="img\png\building_dl.png" alt="Rooms" />
-                                        <div>
-                                            <label>Room</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <%--2--%>
-
-                            <a href="customer.aspx" style="text-decoration: none;">
-                                <div class="text-center">
-
-                                    <div class="text-center xcard" style="background-color: lightpink;">
-                                        <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
-                                        <img class="xpng" src="img/png/customer_dl.png" alt="customer" />
-                                        <div>
-                                            <label>Customer</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
                         </div>
-
                     </div>
-                    <%--/Report--%>
-                </div>
+                </a>
+
+                <%--2--%>
+
+                <a href="customer.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: tan;">
+
+                            <img class="d-none xgif" src="img/gif/bill.gif" alt="customer" />
+                            <img class="xpng" src="img/gif/bill.png" alt="customer" />
+                            <div>
+                                <label>ใบแจ้งค่าใช้จ่าย</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="Room.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: tan">
+                            <img class="d-none xgif" src="img\gif\computer_dl.gif" alt="Process" />
+                            <img class="xpng" src="img\gif\computer_dl.png" alt="Process" />
+                            <div>
+                                <label>สร้างใบแจ้งหนี้</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="Room.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: tan">
+                            <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
+                            <img class="xpng" src="img\gif\building_dl.png" alt="Rooms" />
+                            <div>
+                                <label>บันทึกค่าส่วนกลาง</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <%--2--%>
+
+                <a href="customer.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: tan;">
+                            <img class="d-none xgif" src="img/gif/water_tap.gif" alt="customer" />
+                            <img class="xpng" src="img/gif/water_tap.png" alt="customer" />
+                            <div>
+                                <label>บันทึกค่าน้ำประปา</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <%--1--%>
+
+                <a href="Room.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: tan">
+                            <img class="d-none xgif" src="img\gif\electric_socket.gif" alt="Rooms" />
+                            <img class="xpng" src="img\gif\electric_socket.png" alt="Rooms" />
+                            <div>
+                                <label>บันทึกค่าไฟฟ้า</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <%--2--%>
+
+                <a href="customer.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: tan;">
+                            <img class="d-none xgif" src="img/gif/add-file.gif" alt="customer" />
+                            <img class="xpng" src="img/gif/add-file.png" alt="customer" />
+                            <div>
+                                <label>บันทึก รายการอื่นๆ</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
             </div>
-       
+        </div>
+        <%--/Record--%>
+
+        <%--Report--%>
+        <div class="col-3 ms-2">
+            <div class="p-2" style="background-color: lightblue; width: fit-content; border-radius: 10px 15px;">
+
+                <%--1--%>
+
+                <a href="Room.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: lightpink">
+                            <%--<img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />--%>
+                            <%--<img class="xpng" src="img\png\building_dl.png" alt="Rooms" />--%>
+                            <div>
+                                <label>รายงาน ทะเบียน</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <%--2--%>
+
+                <a href="customer.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: lightpink;">
+                            <%--        <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
+                            <img class="xpng" src="img/png/customer_dl.png" alt="customer" />--%>
+                            <div>
+                                <label>รายงาน บันทึก</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <%--1--%>
+
+                <a href="Room.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: lightpink">
+                            <%--<img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
+                            <img class="xpng" src="img\png\building_dl.png" alt="Rooms" />--%>
+                            <div>
+                                <label>รายงาน แจ้งค่าใช้จ่าย</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <%--2--%>
+
+                <a href="customer.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: lightpink;">
+                            <%-- <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
+                            <img class="xpng" src="img/png/customer_dl.png" alt="customer" />--%>
+                            <div>
+                                <label>รายงาน รับเงิน</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <%--1--%>
+
+                <a href="Room.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: lightpink">
+                            <%-- <img class="d-none xgif" src="img\gif\building_dl.gif" alt="Rooms" />
+                            <img class="xpng" src="img\png\building_dl.png" alt="Rooms" />--%>
+                            <div>
+                                <label>รายงาน บัญชีลูกหนี้</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <%--2--%>
+
+                <a href="customer.aspx" style="text-decoration: none;">
+                    <div class="text-center">
+
+                        <div class="text-center xcard" style="background-color: lightpink;">
+                            <%-- <img class="d-none xgif" src="img/gif/customer_dl.gif" alt="customer" />
+                            <img class="xpng" src="img/png/customer_dl.png" alt="customer" />--%>
+                            <div>
+                                <label>รายงาน อื่นๆ</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <%--/Report--%>
     </div>
 
 
