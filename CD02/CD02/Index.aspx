@@ -1,43 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="CD02.Index" %>
 
 <link href="Content/bootstrap.min.css" rel="stylesheet" />
-
+<link href="Index.css" rel="stylesheet" />
 <div class="container mt-5">
-    <style>
-        .xcard {
-            margin: 4px 6px 4px 6px;
-            border-radius: 20px 20px;
-            transition: background-color 1s; /* เพิ่มเอฟเฟกต์การเปลี่ยนสี */
-        }
-
-            .xcard:hover {
-                background-color: palevioletred;
-                /*border:dashed*/
-            }
-
-
-            .xcard img {
-                width: 100%;
-                height: auto;
-            }
-
-        @media (max-width: 768px) { /* ปรับขนาดภาพเมื่อจอเล็กลงมา */
-            .xcard img {
-                width: auto;
-                height: auto;
-            }
-        }
-
-        .hidden-content {
-            display: none; /* ซ่อนเนื้อหา */
-        }
-
-        .visible-space {
-            height: 128px; /* ปรับขนาดพื้นที่ว่างตามที่ต้องการ */
-            /* สีพื้นหลังของพื้นที่ว่าง สามารถเปลี่ยนแปลงตามที่ต้องการ */
-            background-color: transparent;
-        }
-    </style>
 
 
     <h5>ระบบบริหารอาคารชุด</h5>
@@ -364,30 +329,6 @@
         <%--/Report--%>
     </div>
 
-
-    <script>
-        const cards = document.querySelectorAll('.xcard');
-
-        cards.forEach(card => {
-            const gif = card.querySelector('.xgif');
-            const png = card.querySelector('.xpng');
-            let originalBackgroundColor = card.style.backgroundColor; // เก็บสีพื้นหลังเดิม
-
-            card.addEventListener('mouseover', () => {
-                gif.classList.remove('d-none');
-                png.classList.add('d-none');
-                card.style.backgroundColor = 'palevioletred'; // เพิ่มสีพื้นหลังเมื่อเมาส์เข้ามา
-                //card.style.border = 'dashed';
-            });
-
-            card.addEventListener('mouseout', () => {
-                gif.classList.add('d-none');
-                png.classList.remove('d-none');
-                card.style.backgroundColor = originalBackgroundColor; // เปลี่ยนสีพื้นหลังกลับเป็นสีเดิม
-                //card.style.border = '';
-            });
-        });
-
-    </script>
+    <script src="Index.js"></script>
 
 </div>
