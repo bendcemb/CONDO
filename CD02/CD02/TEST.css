@@ -1,4 +1,4 @@
-﻿/*body {
+﻿body {
     background: #f2f4f8;
     display: flex;
     justify-content: space-around;
@@ -6,46 +6,7 @@
     flex-wrap: wrap;
     height: 100vh;
     font-family: "Open Sans";
-}*/
-
-.xbody1 {
-    background: #f2f4f8;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    /*height: 20vh;*/
-    font-family: "Open Sans";
-    margin:20px 5px 5px 5px;
-    padding: 10px 5px 10px 5px;
 }
-
-.xbody2 {
-    background: #f2f4f8;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    /*height: 20vh;*/
-    font-family: "Open Sans";
-    margin: 20px 5px 5px 5px;
-    padding: 10px 5px 10px 5px;
-}
-
-.xbody3 {
-    background: #f2f4f8;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    /*height: 20vh;*/
-    font-family: "Open Sans";
-    margin: 20px 5px 5px 5px;
-    padding: 10px 5px 10px 5px;
-}
-
-
-
 
 .education {
     --bg-color: #ffd861;
@@ -73,46 +34,31 @@
     --bg-color-light: #f1f7ff;
     --text-color-hover: #4C5656;
     --box-shadow-color: rgba(220, 233, 255, 0.48);
-    
-}
-
-.Room {
-    --bg-color: #DCE9FF;
-    --bg-color-light: #f1f7ff;
-    --text-color-hover: #4C5656;
-    --box-shadow-color: rgba(220, 233, 255, 0.48);
 }
 
 .card {
-    /*  width: 220px;
-    height: 321px;*/
-    width: 110px;
-    height: 161px;
+    width: 220px;
+    height: 321px;
     background: #fff;
-    /*border-top-right-radius: 10px;*/
-    border-top-right-radius: 5px;
+    border-top-right-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    /*box-shadow: 0 14px 26px rgba(0,0,0,0.04);*/
-    box-shadow: 0 7px 13px rgba(0,0,0,0.04);
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
     transition: all 0.3s ease-out;
     text-decoration: none;
 }
 
     .card:hover {
-      /*  transform: translateY(-5px) scale(1.005) translateZ(0);
-        box-shadow: 0 24px 36px rgba(0,0,0,0.11), 0 24px 46px var(--box-shadow-color);*/
-        transform: translateY(-2px) scale(0.502) translateZ(0);
-        box-shadow: 0 12px 18px rgba(0,0,0,0.11), 0 12px 23px var(--box-shadow-color);
+        transform: translateY(-5px) scale(1.005) translateZ(0);
+        box-shadow: 0 24px 36px rgba(0,0,0,0.11), 0 24px 46px var(--box-shadow-color);
     }
 
         .card:hover .overlay {
             transform: scale(4) translateZ(0);
-           
         }
 
         .card:hover .circle {
@@ -130,27 +76,21 @@
 
     .card:active {
         transform: scale(1) translateZ(0);
-        /*box-shadow: 0 15px 24px rgba(0,0,0,0.11), 0 15px 24px var(--box-shadow-color);*/
-        box-shadow: 0 7px 12px rgba(0,0,0,0.11), 0 7px 12px var(--box-shadow-color);
+        box-shadow: 0 15px 24px rgba(0,0,0,0.11), 0 15px 24px var(--box-shadow-color);
     }
 
     .card p {
-        /*font-size: 17px;*/
-        font-size: 8px;
+        font-size: 17px;
         color: #4C5656;
-        /*margin-top: 30px;*/
-        margin-top: 15px;
+        margin-top: 30px;
         z-index: 1000;
         transition: color 0.3s ease-out;
     }
 
 .circle {
-    /*    width: 131px;
-    height: 131px;*/
-    width: 65px;
-    height: 65px;
-    /*border-radius: 50%;*/
-    border-radius: 25%;
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
     background: #fff;
     border: 2px solid var(--bg-color);
     display: flex;
@@ -163,19 +103,14 @@
 
     .circle:after {
         content: "";
-        /* width: 118px;
-        height: 118px;*/
-        width: 59px;
-        height: 59px;
+        width: 118px;
+        height: 118px;
         display: block;
         position: absolute;
         background: var(--bg-color);
-        /*border-radius: 50%;*/
-        border-radius: 25%;
-      /*  top: 7px;
-        left: 7px;*/
-        top: 3px;
-        left: 3px;
+        border-radius: 50%;
+        top: 7px;
+        left: 7px;
         transition: opacity 0.3s ease-out;
     }
 
@@ -185,19 +120,13 @@
     }
 
 .overlay {
-    /*width: 118px;*/
-    width: 59px;
+    width: 118px;
     position: absolute;
-    /*height: 118px;*/
-    height: 59px;
-    /*border-radius: 50%;*/
-    border-radius: 25%;
+    height: 118px;
+    border-radius: 50%;
     background: var(--bg-color);
-/*    top: 70px;
-    left: 50px;*/
-    top: 35px;
-    left: 25px;
+    top: 70px;
+    left: 50px;
     z-index: 0;
     transition: transform 0.3s ease-out;
 }
-
