@@ -1,0 +1,163 @@
+﻿body {
+}
+
+.xcard {
+    /*background: #f2f4f8;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 20vh;
+    font-family: "Open Sans";
+    margin: 20px 5px 5px 5px;
+    padding: 10px 5px 10px 5px;
+}
+
+/*สี*/
+.xfile {
+    --bg-color: #DCE9FF;
+    --bg-color-light: #f1f7ff;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(220, 233, 255, 0.48);
+}
+
+.xrecord {
+    --bg-color: #ffd861;
+    --bg-color-light: #ffeeba;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(255, 215, 97, 0.48);
+}
+
+.xreport {
+    --bg-color: #B8F9D3;
+    --bg-color-light: #e2fced;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(184, 249, 211, 0.48);
+}
+
+.xother {
+    --bg-color: #CEB2FC;
+    --bg-color-light: #F0E7FF;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(206, 178, 252, 0.48);
+}
+
+/*สี*/
+
+
+.card {
+    width: 110px;
+    height: 160px;
+    background: #fff;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+    .card:hover {
+        transform: translateY(-5px) scale(1.005) translateZ(0);
+        box-shadow: 0 24px 36px rgba(0,0,0,0.11), 0 24px 46px var(--box-shadow-color);
+    }
+
+        .card:hover .overlay {
+            transform: scale(4) translateZ(0);
+        }
+
+        .card:hover .circle {
+            border-color: var(--bg-color-light);
+            background: var(--bg-color);
+        }
+
+            .card:hover .circle:after {
+                background: var(--bg-color-light);
+            }
+
+        .card:hover p {
+            color: var(--text-color-hover);
+        }
+
+    .card:active {
+        transform: scale(1) translateZ(0);
+        box-shadow: 0 15px 24px rgba(0,0,0,0.11), 0 15px 24px var(--box-shadow-color);
+    }
+
+    .card p {
+        font-size: 17px;
+        color: #4C5656;
+        margin-top: 50px;
+        z-index: 1000;
+        transition: color 0.3s ease-out;
+    }
+
+.circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+    top: 35px;
+}
+
+    .circle:after {
+        content: "";
+        width: 59px;
+        height: 59px;
+        display: block;
+        position: absolute;
+        background: var(--bg-color);
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+        transition: opacity 0.3s ease-out;
+    }
+
+    .circle svg {
+        z-index: 5000;
+        transform: translateZ(0);
+    }
+
+.overlay {
+    width: 55px;
+    position: absolute;
+    height: 59px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 40px;
+    left: 22px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+
+.xform-control {
+    
+}
+
+    .xform-control input {
+        font-size: 14px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-left:5px;
+    }
+
+        .xform-control input:focus {
+            box-shadow: 0 0 10px rgba(8, 166, 209, 0.5); /* กำหนดเงาเมื่อรับ focus */
+            /*box-shadow: 0 0 10px rgba(8, 166, 209, 0.5);*/
+        }
+

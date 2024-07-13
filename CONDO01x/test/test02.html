@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>test01</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .xbg {
+            color: white;
+            background-image: linear-gradient(to right, #000000, #808080,#000000);
+        }
+
+        .ximg img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: aliceblue;
+            margin-top: 15px;
+        }
+
+        #ximg {
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            margin: 5px 4px 4px 10px;
+        }
+    </style>
+    <link href="Login.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="nav navbar">
+        <!--<img src="img/ben_logo01.png" />-->
+        <!--<img src="img/ben_logo02.png" />-->
+        <!--<img src="img/ben_logo03.png" />-->
+        <img src="img/ben_logo04.png" id="ximg" />
+        <!--<img src="img/ben_logo05.png" />-->
+        <p>BenDzemb</p>
+    </div>
+
+    <div class="card xbg">
+        <div class="container d-flex justify-content-between">
+            <div class="text-center align-self-center">
+                <h1 style="text-shadow:2px 2px 4px blue,0 0 1em white,0 0 0.2em black;">Ben WebApplications</h1>
+            </div>
+            <div>
+
+            </div>
+
+        </div>
+        <div class="container">
+  
+            <div class="shadow" style="width:300px; height:150px; margin:5px 5px 30px 300px; padding:10px 5px 10px 20px;">
+
+                <div><p>มีรหัสอยู่แล้ว กรุณาเข้าระบบ ที่นี้</p></div>
+                <div>
+                    <button class="btn btn-success" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="container d-flex justify-content-between">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div><button type="button" class="btn btn-outline-primary btn-sm">Sign in</button></div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        zzzzzzzzz
+    </div>
+
+    <div class="xbg">
+        <div class="container">
+            xxxxxxxxxxxx
+        </div>
+    </div>
+
+    <div class="container">
+        zzzzzzzzzzzzzzz
+    </div>
+
+    <div class="xbg">
+        <div class="container">
+            xxxxxxxxxxxx
+        </div>
+    </div>
+
+    <div class="container">
+        zzzzzzzzzzzzzzzz
+    </div>
+
+    <div class="xbg">
+        <div class="container">
+            xxxxxxxxxxxx
+        </div>
+    </div>
+
+    <div class="container">
+        zzzzzzzzzzzzzz
+    </div>
+
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php" method="post" style="width:400px;">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required class="form-control">
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required class="form-control">
+
+                <button type="submit" class="btn btn-success">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container mb-4" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn btn btn-danger">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <script src="Login.js"></script>
+</body>
+</html>

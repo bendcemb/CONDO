@@ -1,0 +1,44 @@
+﻿body {
+}
+
+.gridview-with-scrollbar {
+    /*max-height: 200px;*/
+
+    overflow-y: auto; /* Add a vertical scrollbar when the content overflows */
+    overflow-x: auto; /* Add a horizontal scrollbar when the content overflows */
+}
+
+.bg-color-Blue {
+    background-color: #99d7eb; /* Default background color */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+    .bg-color-Blue:hover {
+        background-color: #3bb4c4; /* Change to the desired hover background color */
+    }
+
+.bg-color-Pink {
+    background-color: #efa6d5; /* Replace with the desired color code */
+    transition: background-color 0.3s ease;
+}
+
+    .bg-color-Pink:hover {
+        background-color: #de3fd6
+    }
+
+.bg-color-Green {
+    background-color: #b0f7d2; /* Replace with the desired color code */
+    transition: background-color 0.3s ease;
+}
+
+    .bg-color-Green:hover {
+        background-color: #50de64
+    }
+
+.bg-color-Red {
+    background-color: #f2b1b1; /* Replace with the desired color code */
+}
+
+.bg-color-Yellow {
+    background-color: #efebb9; /* Replace with the desired color code */
+}

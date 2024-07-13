@@ -1,0 +1,38 @@
+﻿#first1 {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    position:absolute;
+    margin-left:418px;
+}
+
+
+#first2 {
+    text-align: center;  
+    font-size: 50px;   
+    margin-right:500px;
+}
+
+.x1 {
+    width: contain;
+    height: 540px;
+    background-color: lightskyblue;
+    background-repeat: repeat;
+}
+
+.gradient-box {
+    background-image: linear-gradient(to right, lightskyblue, #076cb7); /* Gradient จากสีแดงไปสีน้ำเงิน */
+}
+
+
+#img01 {
+    border-radius: 50px;
+    padding: 10px;
+    resize: both;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    box-shadow: rgb(#000000) 20px 20px inset;
+    margin: 10px 10px 10px 10px;
+}
+

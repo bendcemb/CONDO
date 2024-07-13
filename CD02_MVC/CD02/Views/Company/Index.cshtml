@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Company Page";
+    var currentYear = DateTime.Now.Year;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Company</h1>
+</div>
+
+<div>
+    <div class="input-group">
+        <label>เริ่ม</label>
+        <select id="startyear" class="form-control" onchange="updateEndYear()">
+            @for (var year = 1982; year <= currentYear; year++)
+            {
+                <option>@year</option>
+            }
+        </select>
+
+        <label>ถึง</label>
+        <select id="endyear" class="form-control">
+            @for (var year = 1982; year <= currentYear; year++)
+            {
+                <option>@year</option>
+            }
+        </select>
+    </div>
+
+    <label>โซน</label>
+    <select id="zone" class="form-control">
+        <option value="">เลือกโซน</option>
+        <option value="north">ภาคเหนือ</option>
+        <option value="northeast">ภาคตะวันออกเฉียงเหนือ</option>
+        <option value="central">ภาคกลาง</option>
+        <option value="south">ภาคใต้</option>
+    </select>
+
+    <label>ประเภท</label>
+    <select id="type" class="form-control">
+        <option value="">เลือกประเภท</option>
+        <option value="type1">ประเภทที่ 1</option>
+        <option value="type2">ประเภทที่ 2</option>
+        <option value="type3">ประเภทที่ 3</option>
+    </select>
+
+
+    <script>
+        function updateEndYear() {
+            var startYear = document.getElementById('startyear').value;
+            var endYearSelect = document.getElementById('endyear');
+            var currentYear = new Date().getFullYear();
+
+            // Clear existing options
+            endYearSelect.innerHTML = '';
+
+            // Add new options based on selected start year
+            for (var year = startYear; year <= currentYear; year++) {
+                var option = document.createElement('option');
+                option.value = year;
+                option.text = year;
+                endYearSelect.appendChild(option);
+            }
+        }
+    </script>
+</div>

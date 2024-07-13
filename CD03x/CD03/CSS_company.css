@@ -1,0 +1,12 @@
+﻿/*.flex-x {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+}*/
+
+.box {
+    border: 5px solid red;
+   display:flex;
+   flex:1;
+   justify-content:flex-start;
+}

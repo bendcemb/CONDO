@@ -1,0 +1,26 @@
+﻿.txtsearch-x {
+    border: 1px solid gray;
+    border-radius:20px;
+    width:500px;
+    box-shadow:rgb(128, 128, 128) 1px 2px;
+
+}
+
+
+.gridview-container {
+    width: 100%;
+
+    /* สำหรับการเลื่อนแนวนอนถ้าจำเป็น */
+    overflow-x: auto; 
+}
+
+    /* ควบคุมการกระจายความกว้างของคอลัมน์ */
+   /* .gridview-container table {
+        width: 100%;
+        table-layout: fixed; 
+    }*/
+
+    /* สำหรับการห่อข้อความถ้ายาวเกิน */
+   /* .gridview-container th, .gridview-container td {
+        word-wrap: break-word; 
+    }*/

@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .xMargin {
+        margin: 4px 7px 4px 4px;
+        border-radius: 20px 20px;
+    }
+</style>
+
+<div class="text-center">
+    @* <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p> *@
+    <h1 class="display-6" id="uPompany">นิติบุคคลอาคารชุด xx</h1>
+    <div class="row">
+        <p>ระบบงาน </p><p id="uModule">บัญชีอาคารชุด รายรับ</p>
+    </div>
+
+</div>
+
+
+<div class="d-flex">
+    <div class="row">
+        <div>
+            
+            <button>
+                <img src="~/images/building_dl_bg.gif" width="150px" height="100px" />              
+                <a asp-controller="Home" asp-action="Privacy">Room</a>
+            </button>
+
+            <button class="" style="width:200px; height:150px; background-color:lightpink">
+                <img src="~/images/customer01.gif" width="150px" height="100px" />
+                <p>Customer</p>
+            </button>
+
+        </div>
+    </div>
+</div>

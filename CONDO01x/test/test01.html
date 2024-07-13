@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>test</title>
+    <link href="test01.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Login.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="card x1 gradient-box">
+            <div class="container">
+
+                <div>
+                    <img src="img/ben_logo01.png" id="img01" />
+                </div>
+
+                <div class="text-center text-white">
+                    <h1>BEN WEBAPPLICATION</h1>
+                    <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxx xx</p>
+                </div>
+
+                <div class="shadow" style="width:400px; height:150px; margin: 20px 2px 150px 100px; border-radius:20px 20px; padding:10px 5px 2px 10px;">
+                    <div>
+                        เข้าระบบ
+
+                    </div>
+                    <div>
+                        <!--<button class="btn btn-primary">Get Started</button>-->
+                        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="btn btn-success">Login</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="card-footer">
+                <div class="container d-flex justify-content-end">
+                    <div class="">
+                        <button class="btn btn-primary">Sign in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="height:300px;">
+            <div>
+                <h1>Present</h1>
+            </div>
+        </div>
+
+        <div class="card x1 gradient-box" style="height:300px;">
+            <div class="container">
+
+
+
+            </div>
+        </div>
+
+        <div class="container" style="height:300px;">
+            <div>
+                <h1>Price</h1>
+            </div>
+        </div>
+
+        <div class="bg-dark bg-opacity-10">
+            <div class="container">
+                <div>
+                    <h1>footer</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+   
+   
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+    <script src="Login.js"></script>
+    <script src="test01.js"></script>
+</body>
+
+
+</html>

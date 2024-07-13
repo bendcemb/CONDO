@@ -1,0 +1,985 @@
+﻿@model IEnumerable<Room>
+
+@{
+    ViewData["Title"] = "Room";
+}
+<div class="text-center">
+    <h1>Room</h1>
+    <label>ทะเบียนห้อง</label>
+</div>
+<br />
+<div class="input-group">
+    <input type="search" class="form-control" placeholder="ค้นหา" />
+    <button class="input-group-text" id="btnSearch">
+        <img alt="ixx" src="\images\search01.gif" height="40" width="40" />
+        Search
+    </button>
+
+</div>
+<div class="row">
+    <a class="btn btn-primary" asp-area="" asp-controller="Room" asp-action="RoomCreate">Create</a>
+</div>
+<div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var room in Model )
+                {
+                    <tr>
+                        <td>@room.RO_CODE</td>
+                        <td>@room.RO_OWNER</td>
+                    </tr>
+                }
+               
+            </tbody>
+        </table>
+    </div>
+    @* <dl class="row d-none">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CODE)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CODE)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_PROJ)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_PROJ)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DEPT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DEPT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FLOOR)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FLOOR)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_ROOM)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_ROOM)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_HOMENO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_HOMENO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_TYPE)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_TYPE)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_AREA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_AREA)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_RATIO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_RATIO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DATEIN)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DATEIN)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_SELECT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_SELECT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_ARAMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_ARAMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FLAG)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FLAG)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_BF)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_BF)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CR)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CR)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_ARNO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_ARNO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_MEA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_MEA)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_ELECNO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_ELECNO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_METERWT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_METERWT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_METEREL)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_METEREL)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CARPARK)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CARPARK)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_OWNER)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_OWNER)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_RATE0)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_RATE0)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUST0)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUST0)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUST1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUST1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUST2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUST2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUST3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUST3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUST4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUST4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUST1TY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUST1TY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUST2TY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUST2TY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUST3TY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUST3TY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LEASENO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LEASENO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN1TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN1TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN2TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN2TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN3TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN3TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN4TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN4TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN5TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN5TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN6TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN6TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN7TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN7TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN8TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN8TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN9TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN9TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN1AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN1AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN2AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN2AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN3AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN3AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN4AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN4AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN5AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN5AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN6AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN6AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN7AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN7AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN8AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN8AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN9AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN9AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_STATUS)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_STATUS)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_RTYPE)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_RTYPE)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_REMARK)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_REMARK)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVNAME1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVNAME1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVADDR1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVADDR1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVTEL1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVTEL1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVID1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVID1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVNAME2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVNAME2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVADDR2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVADDR2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVTEL2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVTEL2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVID2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVID2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVNAME3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVNAME3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVADDR3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVADDR3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVTEL3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVTEL3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVID3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVID3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVNAME4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVNAME4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVADDR4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVADDR4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVTEL4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVTEL4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVID4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVID4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVNAME5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVNAME5)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVADDR5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVADDR5)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVTEL5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVTEL5)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVID5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVID5)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LASTRC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LASTRC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LASTRCD)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LASTRCD)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LASTRCA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LASTRCA)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DATEIN2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DATEIN2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EDIT_DATE)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EDIT_DATE)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EDIT_TIME)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EDIT_TIME)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EDIT_BY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EDIT_BY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FIELD1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FIELD1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FIELD2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FIELD2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FIELD3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FIELD3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FIELD4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FIELD4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_RCODE)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_RCODE)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_RSTATUS)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_RSTATUS)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_JONG)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_JONG)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_JONGD)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_JONGD)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_MOVEIN)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_MOVEIN)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_INDATE)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_INDATE)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_SANYA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_SANYA)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_SANYAD)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_SANYAD)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_BEOUT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_BEOUT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_BEOUTD)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_BEOUTD)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_OUT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_OUT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_OUTD)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_OUTD)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_REMARK2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_REMARK2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_RDATE)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_RDATE)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX5)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX6)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX6)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX7)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX7)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX8)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX8)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX1QTY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX1QTY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX2QTY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX2QTY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX3QTY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX3QTY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX4QTY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX4QTY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX5QTY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX5QTY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX6QTY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX6QTY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX7QTY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX7QTY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX8QTY)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX8QTY)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX1PRC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX1PRC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX2PRC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX2PRC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX3PRC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX3PRC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX4PRC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX4PRC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX5PRC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX5PRC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX6PRC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX6PRC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX7PRC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX7PRC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX8PRC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX8PRC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX1AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX1AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX2AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX2AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX3AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX3AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX4AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX4AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX5AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX5AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX6AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX6AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX7AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX7AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_FX8AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_FX8AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUSTID1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUSTID1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUSTID2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUSTID2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUSTID3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUSTID3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_CUSTID4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_CUSTID4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVD11)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVD11)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVD12)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVD12)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVD21)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVD21)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVD22)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVD22)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVD31)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVD31)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVD32)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVD32)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVD41)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVD41)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_LVD42)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_LVD42)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN10TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN10TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN10AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN10AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN11TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN11TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN11AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN11AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN12TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN12TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN12AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN12AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN13TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN13TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN13AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN13AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN14TO)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN14TO)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_DN14AMT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_DN14AMT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_REMARK3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_REMARK3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_REMARK4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_REMARK4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_REMARK5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_REMARK5)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RO_REMARK6)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RO_REMARK6)
+        </dd>
+    </dl> *@
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
